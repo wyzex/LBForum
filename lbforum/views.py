@@ -55,8 +55,6 @@ def topic(request, topic_id, template_name="lbforum/topic.html"):
     topic.num_views += 1
     topic.save()
     posts = topic.posts
-    if lbf_settings.STICKY_TOPIC_POST:  # sticky topic post
-        posts = posts.filter(topic_post=False)
     posts = posts.order_by('created_on').select_related()
     ext_ctx = {'topic': topic, 'posts': posts}
     ext_ctx['has_replied'] = topic.has_replied(request.user)

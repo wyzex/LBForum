@@ -30,10 +30,10 @@
         </div>
         <div class="post-entry">
             <div class="entry-content">
-                {% if not post.topic_post or not post.topic.need_reply or has_replied %}
+                {% if 1 == 1 %}
                     <p>{% bbcode post.message has_replied %}</p>
                     {% if post.edited_by %}
-                    <p class="postedit"><em>Last edited by {{post.edited_by}} ({{post.updated_on|date:"Y-m-d H:i"}})</em></p>
+                    <p class="postedit"><em>{% trans "Last edited by " %}{{post.edited_by}} ({{post.updated_on|date:"Y-m-d H:i"}})</em></p>
                     {% endif %}
                     {% if post.has_attachments %}
                     <div class="entry-attachments">

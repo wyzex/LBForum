@@ -36,7 +36,7 @@
                         {% endif %}
                         <strong><a class="dark" href="{% url lbforum_user_profile t.posted_by.pk %}">{{t.posted_by.username}}</a></strong> &bull;
                         {{ t.num_views }} {% trans "views" %} &bull;
-                        {% trans "Last post" %} {{ t.get_last_post.update|lbtimesince }} by 
+                        {% trans "Last post" %} {{ t.get_last_post.update|lbtimesince }} {% trans "by" %} 
                         {{t.get_last_post.posted_by}}
                     </span>
                 </td>
