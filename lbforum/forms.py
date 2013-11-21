@@ -8,11 +8,21 @@ from django.utils.translation import ugettext_lazy as _
 from models import Topic, Post, TopicType
 from models import LBForumUserProfile
 
+from registration.forms import RegistrationFormUniqueEmail
+
 FORUM_ORDER_BY_CHOICES = (
     ('-last_reply_on', _('Last Reply')),
     ('-created_on', _('Last Topic')),
 )
 
+attrs_dict = { 'class': 'required' }
+
+class CnRegistrationFormUniqueEmail(RegistrationFormUniqueEmail):
+    username = forms.RegexField(regex=r'(?u)^\w+$',
+                                max_length=30,
+                                widget=forms.TextInput(attrs=attrs_dict),
+                                label=_("Username"),
+                                error_messages={ 'invalid': _("This value must contain only letters, numbers and underscores.") })
 
 class ForumForm(forms.Form):
     order_by = forms.ChoiceField(label=_('Order By'), choices=FORUM_ORDER_BY_CHOICES, required=False)

@@ -49,7 +49,7 @@
                     </div>
                 {% endif %}
                 <div class="main-subhead">
-                    <h2 class="hn"><span>{% trans "Compose and post your" %} {% if is_new_post %}{% trans "new" %}{% else %}{% trans "edited" %}{% endif %} {{ post_type }}</span></h2>
+                    <h2 class="hn"><span>{% if is_new_post %}{% trans "Create" %}{% else %}{% trans "Edit" %}{% endif %} </span></h2>
                 </div>
                 <div class="main-content main-frm" id="post-form">
                     <p class="ct-options options">{% trans "You may use" %}: <span class="item1"><a title="Help with: BBCode" href="http://fluxbb.org/forums/help/bbcode/" class="exthelp">BBCode</a></span> <span><a title="Help with: Images" href="http://fluxbb.org/forums/help/img/" class="exthelp">Images</a></span> <span><a title="Help with: Smilies" href="http://fluxbb.org/forums/help/smilies/" class="exthelp">Smilies</a></span></p>
@@ -85,25 +85,6 @@
                                     </div>
                                 </div>
                             </div>
-                            {% if topic_post %}
-                            <fieldset class="mf-set set3">
-                                <legend><span>{% trans "Optional post settings" %}:</span></legend>
-                                <div class="mf-box checkbox">
-                                    <div class="mf-item">
-                                        <span class="fld-input">
-                                            {{form.need_replay}}
-                                        </span> 
-                                        <label for="fld3">{% trans "reply to see the post" %}</label>
-                                    </div>
-                                    <div class="mf-item">
-                                        <span class="fld-input">
-                                            {{form.need_reply_attachments}}
-                                        </span> 
-                                        <label for="fld3">{% trans "reply to see the attachments" %}</label>
-                                    </div>
-                                </div>
-                            </fieldset>
-                            {% endif %}
                             <fieldset class="mf-set set4">
                                 <legend><span>{% trans "Attachments" %}:</span></legend>
                                 <div class="mf-box checkbox">
