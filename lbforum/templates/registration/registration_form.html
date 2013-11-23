@@ -29,7 +29,7 @@
             <div class="main-wrapper" id="brd-main">
 
                 <div class="main-head">
-                    <h1 class="hn"><span>{% blocktrans %}Register at {{ LBFORUM_TITLE }}{% endblocktrans %}</span></h1>
+                    <h1 class="hn"><span>{% blocktrans %}Register at{% endblocktrans %}</span></h1>
                 </div>
                 <div class="main-content main-frm">
                     {% if form.errors %}
@@ -68,12 +68,6 @@
                                 <div class="sf-box text required">
                                     <label for="fld3"><span>{% trans "e-mail" %}:<em>({% trans "Required" %})</em></span> <small>{% trans "A current valid e-mail address." %}</small></label><br>
                                     <span class="fld-input">{{ form.email}}</span>
-                                </div>
-                            </div>
-                            <div class="sf-set set4">
-                                <div class="sf-box text required">
-                                    <label for="fld3"><span>{% trans "captcha" %}:<em>({% trans "Required" %})</em></span> <small></small></label><br>
-                                    <span class="fld-input">{{ form.captcha}}</span>
                                 </div>
                             </div>
                         </div>

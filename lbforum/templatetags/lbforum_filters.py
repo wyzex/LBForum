@@ -1,5 +1,6 @@
 # -*- coding: UTF-8 -*-
 import datetime
+import new
 
 from django import template
 from django.template.defaultfilters import timesince as _timesince
@@ -11,6 +12,8 @@ from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
 from bbcode import _postmarkup
+from pytils import dt as pytils
+from django.utils import translation
 
 register = template.Library()
 
@@ -85,7 +88,11 @@ def lbtimesince(d, now=None):
             now = datetime.datetime.now(LocalTimezone(d))
         else:
             now = datetime.datetime.now()
-    # ignore microsecond part of 'd' since we removed it from 'now'
+
+    if translation.get_language() == "ru":
+        return pytils.distance_of_time_in_words(d)
+
+    #ignore microsecond part of 'd' since we removed it from 'now'
     delta = now - (d - datetime.timedelta(0, 0, d.microsecond))
     since = delta.days * 24 * 60 * 60 + delta.seconds
     if since // (60 * 60 * 24) < 3:
