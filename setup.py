@@ -94,6 +94,7 @@ setup(
         "postmarkup==1.2.0",
         "six==1.4.1",
         "wsgiref==0.1.2",
+        "pytils==0.2.3",
         ],
     data_files = data_files,
     classifiers = ['Development Status :: 5 - Production/Stable',
