@@ -80,7 +80,7 @@ setup(
     cmdclass = cmdclasses,
     install_requires=[
         "BeautifulSoup==3.2.1",
-        "Django==1.3",
+        "Django==1.4",
         "Pillow==2.4.0",
         "South==0.7.2",
         "argparse==1.2.1",
