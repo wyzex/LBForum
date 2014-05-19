@@ -81,7 +81,7 @@ setup(
     install_requires=[
         "BeautifulSoup==3.2.1",
         "Django==1.3",
-        "Pillow==2.2.1",
+        "Pillow==2.4.0",
         "South==0.7.2",
         "argparse==1.2.1",
         "django-helper==0.8.4",
@@ -90,7 +90,7 @@ setup(
         "django-pagination==1.0.7",
         "django-registration==0.8",
         "django-simple-avatar==0.8.6",
-        "django-simple-captcha==0.4.0",
+        "django-simple-captcha==0.4.2",
         "postmarkup==1.2.0",
         "six==1.4.1",
         "wsgiref==0.1.2",

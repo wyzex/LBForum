@@ -1936,3 +1936,8 @@ body {
     overflow: hidden;
     width: 220px;
 }
+
+
+.captcha-box {
+    height: 75px;
+}

@@ -7,6 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from models import Topic, Post, TopicType
 from models import LBForumUserProfile
+from captcha.fields import CaptchaField
 
 from registration.forms import RegistrationFormUniqueEmail
 
@@ -23,6 +24,8 @@ class CnRegistrationFormUniqueEmail(RegistrationFormUniqueEmail):
                                 widget=forms.TextInput(attrs=attrs_dict),
                                 label=_("Username"),
                                 error_messages={ 'invalid': _("This value must contain only letters, numbers and underscores.") })
+    captcha = CaptchaField()
+
 
 class ForumForm(forms.Form):
     order_by = forms.ChoiceField(label=_('Order By'), choices=FORUM_ORDER_BY_CHOICES, required=False)
