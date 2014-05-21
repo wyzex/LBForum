@@ -95,7 +95,7 @@ setup(
         "django-simple-captcha==0.4.2",
         "postmarkup==1.2.0",
         "six==1.4.1",
-        "django-simple-avatar"
+        "django-simple-avatar",
         "wsgiref==0.1.2",
         "pytils==0.2.3",
         ],
