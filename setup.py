@@ -92,7 +92,6 @@ setup(
         "django-onlineuser==0.8.7",
         "django-pagination==1.0.7",
         "django-registration==0.8",
-        "git+https://github.com/slepa/django-simple-avatar.git",
         "django-simple-captcha==0.4.2",
         "postmarkup==1.2.0",
         "six==1.4.1",
