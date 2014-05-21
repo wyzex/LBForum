@@ -78,9 +78,6 @@ setup(
     description = 'LBForum is a quick and simple forum which uses the Django Framework.',
     packages = packages,
     cmdclass = cmdclasses,
-    dependency_links = [
-    'https://github.com/slepa/django-simple-avatar.git#egg=django-simple-avatar-fork',
-    ],
     install_requires=[
         "BeautifulSoup==3.2.1",
         "Django==1.4",
@@ -95,7 +92,6 @@ setup(
         "django-simple-captcha==0.4.2",
         "postmarkup==1.2.0",
         "six==1.4.1",
-        "django-simple-avatar-fork",
         "wsgiref==0.1.2",
         "pytils==0.2.3",
         ],
